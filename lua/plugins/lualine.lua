@@ -5,6 +5,7 @@ return {
       options = {
         theme = 'everforest'
       }
+      --TODO: Update color scheme
     }
   end
 }
