@@ -65,3 +65,13 @@ gr -- References
 \<C-e\> -- Abort
 
 \<CR\> -- Confirm
+
+## TODO
+
+- vim-maximizer
+- comments
+- dressing
+- theme
+- which-key for all commands
+- trouble
+- window commands
