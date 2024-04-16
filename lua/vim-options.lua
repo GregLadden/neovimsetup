@@ -37,6 +37,19 @@ opt.swapfile = false
 -- Sync clipboard between OS and Neovim.
 opt.clipboard:append("unnamedplus")
 
+-- Sync clipboard for WSL on Windows
+vim.g.clipboard = {
+  name = 'xclip',
+  copy = {
+    ['+'] = 'xclip -selection clipboard -in',
+    ['*'] = 'xclip -selection primary -in',
+  },
+  paste = {
+    ['+'] = 'xclip -selection clipboard -out',
+    ['*'] = 'xclip -selection primary -out',
+  },
+  cache_enabled = 1,
+}
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 opt.hlsearch = true
 
