@@ -23,17 +23,20 @@ function M.config()
 			hl.TSConditional = { link = "Orange" }
 			hl.TSKeywordReturn = { link = "Orange" }
 			hl.TSRepeat = { link = "Orange" }
+			hl.TSInclude = { link = "Green" }
+			hl.javascriptTSInclude = { link = "Green" }
+			hl.goTSInclude = { link = "Green" }
 			hl["@lsp.type.class"] = { link = "Green" }
 		end,
 		colours_override = function(palette)
 			palette.orange = "#FAAF4A"
-			palette.red = "#F69092"
-			palette.aqua = "#E9D4A8"
+			palette.red = "#E67E80"
+			palette.aqua = "#FBE6BC"
 			palette.blue = "#8DB5BC"
 			palette.purple = "#C7A4E0"
 			palette.green = "#92BF8D"
 			palette.yellow = "#E8EF80"
-			-- palette.fg = "#DDCDAB"
+			palette.fg = "#FBE6BC"
 		end,
 	})
 	everforest.load()
