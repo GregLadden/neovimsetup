@@ -1,5 +1,10 @@
 # Tmux
 
+**Prerequisites**
+
+- Tmux installed
+- Tmux plugin manager
+
 Create a .tmux.conf file and add
 
 ```tmux
@@ -33,6 +38,15 @@ bind -r m resize-pane -Z
 
 set -g mouse on
 
+# tmux plugin manager
+set -g @plugin 'tmux-plugins/tpm'
+
+# list of tmux plugins
+set -g @plugin 'christoomey/vim-tmux-navigator'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+
 ```
 
 **Start New Session**
@@ -45,7 +59,7 @@ tmux new -s "Name of session"
 **Exit Session**
 
 ```shell
-tmuch detach
+tmux detach
 ```
 
 **Go back into a session**
@@ -65,4 +79,16 @@ tmux ls
 ```shell
 C-a
 s
+```
+
+**Creating and navigating windows**
+
+```shell
+C-a c # creates new tmux window
+C-a , # renames tmux window
+C-a {number} # navigate to window by number
+C-a n # cycles through windows
+C-a p # goes to previous
+C-a w # views all sessions
+
 ```
