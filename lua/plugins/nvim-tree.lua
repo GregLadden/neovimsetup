@@ -62,6 +62,9 @@ return {
 		vim.cmd("highlight NvimTreeNormal guibg=#272e33")
 		vim.cmd("highlight NvimTreeEndOfBuffer  guibg=#272e33")
 		vim.cmd("highlight NvimTreeFolderIcon  guifg=#859289")
-		vim.cmd("highlight NvimTreeFolderName    guifg=fg")
+		vim.cmd("highlight NvimTreeFolderName    guifg=#8DB5BC")
+		vim.cmd("highlight NvimTreeEmptyFolderName    guifg=#8DB5BC")
+		vim.cmd("highlight NvimTreeOpenedFolderName    guifg=#8DB5BC")
+		vim.cmd("highlight NvimTreeSymlinkFolderName   guifg=#8DB5BC")
 	end,
 }
