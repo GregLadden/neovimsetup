@@ -42,6 +42,8 @@
   "trouble.nvim": { "branch": "main", "commit": "b9cf677f20bb2faa2dacfa870b084e568dca9572" },
   "vim-fugitive": { "branch": "master", "commit": "10fb874d7e1502a98b4ea02ad9307ad34a22bcdf" },
   "vim-maximizer": { "branch": "master", "commit": "2e54952fe91e140a2e69f35f22131219fcd9c5f1" },
+  "vim-test": { "branch": "master", "commit": "79c8d972e46862d67a30af2807262e03d4c5eed6" },
   "vim-tmux-navigator": { "branch": "master", "commit": "a26954a585b02a2ac02f87145e204f8798a7cbc2" },
+  "vimux": { "branch": "master", "commit": "f7c41607d9246ec4b6cc28587cce84d75d106e3e" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" }
 }
