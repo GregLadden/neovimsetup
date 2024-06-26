@@ -8,8 +8,8 @@
 Create a .tmux.conf file and add
 
 ```tmux
-set -g default-terminal "screen-256color"
-set -g default-terminal "xterm-256color"
+# uncomment for wsl2 set -g default-terminal "screen-256color"
+# uncomment for wsl2 set -g default-terminal "xterm-256color"
 
 set -g pane-border-status top
 
