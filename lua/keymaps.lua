@@ -1,5 +1,9 @@
 local keymap = vim.keymap
 
+vim.cmd([[
+  autocmd BufRead,BufNewFile *.templ set filetype=templ
+]])
+
 -- Removes highlighting
 keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
