@@ -11,11 +11,8 @@ return {
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
     lspconfig.lua_ls.setup({ capabilities = capabilities })
     lspconfig.pyright.setup({ capabilities = capabilities })
-    lspconfig.angularls.setup({ capabilities = capabilities })
-    lspconfig.ansiblels.setup({ capabilities = capabilities })
     lspconfig.clangd.setup({ capabilities = capabilities })
     lspconfig.cssls.setup({ capabilities = capabilities })
-    lspconfig.unocss.setup({ capabilities = capabilities })
     lspconfig.diagnosticls.setup({ capabilities = capabilities })
     lspconfig.dockerls.setup({ capabilities = capabilities })
     lspconfig.docker_compose_language_service.setup({ capabilities = capabilities })
@@ -27,15 +24,12 @@ return {
     lspconfig.helm_ls.setup({ capabilities = capabilities })
     lspconfig.jsonls.setup({ capabilities = capabilities })
     lspconfig.biome.setup({ capabilities = capabilities })
-    lspconfig.tsserver.setup({ capabilities = capabilities })
     lspconfig.sqlls.setup({ capabilities = capabilities })
     lspconfig.tailwindcss.setup({ capabilities = capabilities })
     lspconfig.templ.setup({ capabilities = capabilities })
     lspconfig.terraformls.setup({ capabilities = capabilities })
     lspconfig.tflint.setup({ capabilities = capabilities })
     lspconfig.yamlls.setup({ capabilities = capabilities })
-    lspconfig.terraformls.setup({ capabilities = capabilities })
-    lspconfig.terraformls.setup({ capabilities = capabilities })
     lspconfig.emmet_ls.setup({
       capabilities = capabilities,
       filetypes = { "css", "eruby", "html", "javascript", "javascriptreact", "less", "sass", "scss", "svelte", "pug", "typescriptreact", "vue" },
