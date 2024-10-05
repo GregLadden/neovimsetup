@@ -16,7 +16,6 @@ return {
 				right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
 				left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
 				middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"
-				-- buffer_close_icon = '󰅖',
 				buffer_close_icon = "✗",
 				-- buffer_close_icon = '✕',
 				close_icon = "",
@@ -60,14 +59,15 @@ return {
 				-- tab_selected = {},
 				-- background = {},
 				-- indicator_selected = {},
-				-- fill = {},
+				fill = {
+					bg = "#232A2E",
+				},
 			},
 		})
-
 		-- Keymaps
 		local opts = { noremap = true, silent = true, desc = "Go to Buffer" }
-		-- vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", {})
-		-- vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", {})
+		vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", {})
+		vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", {})
 		-- vim.keymap.set('n', '<leader>1', "<cmd>lua require('bufferline').go_to_buffer(1)<CR>", opts)
 		-- vim.keymap.set('n', '<leader>2', "<cmd>lua require('bufferline').go_to_buffer(2)<CR>", opts)
 		-- vim.keymap.set('n', '<leader>3', "<cmd>lua require('bufferline').go_to_buffer(3)<CR>", opts)
