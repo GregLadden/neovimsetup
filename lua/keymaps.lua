@@ -38,3 +38,7 @@ function ToggleFoldmethod()
 		vim.o.foldmethod = "indent"
 	end
 end
+
+-- Move lines up or down in visual mode
+keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- Shift visual selected line down
+keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- Shift visual selected line up
