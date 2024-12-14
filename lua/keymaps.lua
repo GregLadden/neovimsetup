@@ -1,8 +1,13 @@
 local keymap = vim.keymap
 
-vim.cmd([[
-  autocmd BufRead,BufNewFile *.templ set filetype=templ
-]])
+-- Highlight when yanking text
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yanking (copying) text",
+	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
 
 -- Removes highlighting
 keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
@@ -12,12 +17,6 @@ keymap.set("n", "<leader>wv", "<C-w>v", { desc = "[w]indow [v]ertical" })
 keymap.set("n", "<leader>wh", "<C-w>s", { desc = "[w]indow [h]orizontal" })
 keymap.set("n", "<leader>we", "<C-w>=", { desc = "[w]indow [e]qual size" })
 keymap.set("n", "<leader>wc", ":close<CR>", { desc = "[w]indow [c]lose" })
-
-keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "[t]ab [o]pen new" })
-keymap.set("n", "<leader>tc", "<cmd>tabclose<CR>", { desc = "[t]ab [c]lose current" })
-keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "[t]ab [n]ext" })
-keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "[t]ab [p]revious" })
-keymap.set("n", "<leader>tb", "<cmd>tabnew %<CR>", { desc = "[t]ab [b]buffer - Copy buffer to new tab " })
 
 -- Fold and unfold mappings
 keymap.set("n", "<space>ft", "za", { noremap = true, desc = "[f]old [t]oggle line under cursor" }) -- Toggle fold under cursor
@@ -40,5 +39,5 @@ function ToggleFoldmethod()
 end
 
 -- Move lines up or down in visual mode
-keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- Shift visual selected line down
 keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- Shift visual selected line up
+keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- Shift visual selected line down
